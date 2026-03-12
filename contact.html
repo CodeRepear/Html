@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FileMarket</title>
+    <!-- Tailwind CSS (CDN for rapid prototyping as requested) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased flex flex-col min-h-screen bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="glass-effect sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fa-solid fa-cloud-arrow-down text-deep-blue text-2xl"></i>
+                        <span class="font-bold text-xl text-deep-blue tracking-tight">FileMarket</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-deep-blue transition">Home</a>
+                    <a href="files.html" class="text-gray-600 hover:text-deep-blue transition">Files Catalog</a>
+                    <a href="contact.html"
+                        class="text-deep-blue font-semibold border-b-2 border-deep-blue transition">Contact Us</a>
+                    <!-- WhatsApp Global Button -->
+                    <a href="#"
+                        class="whatsapp-link bg-whatsapp hover:bg-green-600 text-white px-5 py-2 rounded-full font-medium shadow-md btn-hover flex items-center gap-2"
+                        data-message="Hello! I'm reaching out from FileMarket.">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect border-t border-gray-100">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 text-gray-600 hover:text-deep-blue hover:bg-gray-50 rounded-md">Home</a>
+                <a href="files.html"
+                    class="block px-3 py-2 text-gray-600 hover:text-deep-blue hover:bg-gray-50 rounded-md">Files
+                    Catalog</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-deep-blue font-semibold bg-blue-50 rounded-md">Contact
+                    Us</a>
+                <a href="#"
+                    class="whatsapp-link mt-4 block w-full text-center bg-whatsapp text-white px-5 py-2 rounded-md font-medium"
+                    data-message="Hello! I'm reaching out from FileMarket.">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 animate-fade-in delay-100">
+        <div class="max-w-4xl mx-auto">
+
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Get in Touch</h1>
+                <p class="mt-4 text-lg text-gray-500">Have a question about a file, need custom software, or
+                    experiencing issues? We're here to help.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Contact Card 1: WhatsApp -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
+                        <i class="fa-brands fa-whatsapp text-3xl text-whatsapp"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Chat on WhatsApp</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Fastest response time for purchase inquiries and immediate
+                        support.</p>
+                    <a href="#"
+                        class="whatsapp-link inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-whatsapp hover:bg-green-600 transition btn-hover shadow-sm"
+                        data-message="Hi, I need support from FileMarket.">
+                        Message Us Now
+                    </a>
+                </div>
+
+                <!-- Contact Card 2: Email -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-md transition">
+                    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+                        <i class="fa-solid fa-envelope text-3xl text-deep-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Send an Email</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Perfect for detailed requests, custom software quotes, or
+                        general inquiries.</p>
+                    <a href="mailto:support@filemarket.com"
+                        class="inline-flex items-center justify-center w-full px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition btn-hover shadow-sm">
+                        support@filemarket.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-8">
+                <div class="p-8 sm:p-10">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First
+                                    name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="first-name" id="first-name"
+                                        class="py-3 px-4 block w-full shadow-sm focus:ring-deep-blue focus:border-deep-blue border-gray-300 rounded-md border"
+                                        placeholder="John">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                                <div class="mt-1">
+                                    <input type="text" name="last-name" id="last-name"
+                                        class="py-3 px-4 block w-full shadow-sm focus:ring-deep-blue focus:border-deep-blue border-gray-300 rounded-md border"
+                                        placeholder="Doe">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                            <div class="mt-1">
+                                <input type="email" name="email" id="email"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-deep-blue focus:border-deep-blue border-gray-300 rounded-md border"
+                                    placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <div class="mt-1">
+                                <select id="subject" name="subject"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-deep-blue focus:border-deep-blue border-gray-300 rounded-md border bg-white">
+                                    <option>General Inquiry</option>
+                                    <option>Purchase Support</option>
+                                    <option>Request Custom File/Software</option>
+                                    <option>Report a Bug</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <div class="mt-1">
+                                <textarea id="message" name="message" rows="4"
+                                    class="py-3 px-4 block w-full shadow-sm focus:ring-deep-blue focus:border-deep-blue border border-gray-300 rounded-md"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="button"
+                                onclick="alert('Form submission is not connected to a backend yet. Please use WhatsApp or Email directly.')"
+                                class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-deep-blue hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-deep-blue btn-hover transition">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:justify-start mb-6 md:mb-0 items-center gap-2 text-white">
+                    <i class="fa-solid fa-cloud-arrow-down text-2xl"></i>
+                    <span class="text-xl font-bold">FileMarket</span>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <span class="sr-only">Facebook</span>
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <span class="sr-only">Twitter</span>
+                        <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-whatsapp transition whatsapp-link"
+                        data-message="Hello FileMarket!">
+                        <span class="sr-only">WhatsApp</span>
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
+                <p class="text-base text-gray-400 text-center md:text-left">
+                    &copy; 2026 Admin Files. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex justify-center md:justify-start space-x-4 text-sm">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

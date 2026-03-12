@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FA;
+    color: #1a202c;
+}
+
+/* Glassmorphism Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.card-glass {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #edf2f7;
+}
+
+/* Animations and Interactions */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-hover {
+    transition: all 0.2s ease;
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+/* Custom Colors */
+.text-deep-blue {
+    color: #1e3a8a;
+}
+
+/* Tailwind blue-900 */
+.bg-deep-blue {
+    background-color: #1e3a8a;
+}
+
+.bg-deep-blue:hover {
+    background-color: #1e40af;
+}
+
+/* blue-800 */
+
+.text-whatsapp {
+    color: #25D366;
+}
+
+.bg-whatsapp {
+    background-color: #25D366;
+}
+
+.bg-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+/* Modal specific */
+.modal-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

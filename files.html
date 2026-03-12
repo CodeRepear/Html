@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files Catalog | FileMarket</title>
+    <!-- Tailwind CSS (CDN for rapid prototyping as requested) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="glass-effect sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fa-solid fa-cloud-arrow-down text-deep-blue text-2xl"></i>
+                        <span class="font-bold text-xl text-deep-blue tracking-tight">FileMarket</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-deep-blue transition">Home</a>
+                    <a href="files.html"
+                        class="text-deep-blue font-semibold border-b-2 border-deep-blue transition">Files Catalog</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-deep-blue transition">Contact Us</a>
+                    <!-- WhatsApp Global Button -->
+                    <a href="#"
+                        class="whatsapp-link bg-whatsapp hover:bg-green-600 text-white px-5 py-2 rounded-full font-medium shadow-md btn-hover flex items-center gap-2"
+                        data-message="Hello! I'm reaching out from FileMarket.">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect border-t border-gray-100">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 text-gray-600 hover:text-deep-blue hover:bg-gray-50 rounded-md">Home</a>
+                <a href="files.html" class="block px-3 py-2 text-deep-blue font-semibold bg-blue-50 rounded-md">Files
+                    Catalog</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-gray-600 hover:text-deep-blue hover:bg-gray-50 rounded-md">Contact
+                    Us</a>
+                <a href="#"
+                    class="whatsapp-link mt-4 block w-full text-center bg-whatsapp text-white px-5 py-2 rounded-md font-medium"
+                    data-message="Hello! I'm reaching out from FileMarket.">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow bg-gray-50 py-10 animate-fade-in delay-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h1 class="text-3xl font-extrabold text-gray-900">Files Catalog</h1>
+                <p class="mt-2 text-gray-500">Browse our complete collection of digital assets and software.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="w-full md:w-64 flex-shrink-0 space-y-6">
+                    <!-- Search -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-gray-900 mb-3">Search</h3>
+                        <div class="relative">
+                            <input type="text" placeholder="Search files..."
+                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-deep-blue focus:border-transparent">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-gray-900 mb-3">Categories</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue" checked>
+                                <span class="text-gray-700 text-sm">All Files</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">Software</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">Scripts / Code</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">3D Assets</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">Documents</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Filters -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-gray-900 mb-3">Pricing</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">Free</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">Paid (Buy)</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-deep-blue focus:ring-deep-blue">
+                                <span class="text-gray-700 text-sm">Rentals</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Grid/List Area -->
+                <div class="flex-1">
+                    <!-- Toolbar -->
+                    <div
+                        class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 mb-6 flex justify-between items-center">
+                        <p class="text-sm text-gray-500 font-medium ml-2">Showing 4 files</p>
+                        <div class="flex gap-1 bg-gray-100 p-1 rounded-lg">
+                            <button id="view-grid"
+                                class="p-2 rounded text-deep-blue bg-blue-50 focus:outline-none transition">
+                                <i class="fa-solid fa-table-cells-large"></i>
+                            </button>
+                            <button id="view-list"
+                                class="p-2 rounded text-gray-400 hover:text-gray-700 focus:outline-none transition">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Grid Container -->
+                    <div id="files-container"
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in delay-200">
+
+                        <!-- Card 1 -->
+                        <div class="file-card card-glass rounded-xl overflow-hidden hover-lift flex flex-col h-full bg-white border border-gray-100"
+                            data-title="Video Editor Starter" data-type="Software / ZIP" data-size="45 MB"
+                            data-price="Free"
+                            data-desc="A lightweight video editing suite perfect for beginners. Features timeline editing, basic transitions, and mp4 export."
+                            data-image="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=300&fit=crop">
+                            <div class="card-img-wrapper w-full h-48 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=300&fit=crop"
+                                    alt="File Thumbnail" class="w-full h-full object-cover border-b border-gray-100">
+                            </div>
+                            <div class="card-content p-5 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-gray-100 text-gray-600 rounded">Software</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-blue-100 text-blue-800 rounded">Free</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1 leading-tight">Video Editor Starter</h3>
+                                <p class="text-sm text-gray-500 mb-4 flex-1 line-clamp-2">A lightweight video editing
+                                    suite perfect for beginners...</p>
+                                <div class="mt-auto">
+                                    <button
+                                        class="open-modal-btn w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded-md font-medium text-sm transition btn-hover">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="file-card card-glass rounded-xl overflow-hidden hover-lift flex flex-col h-full bg-white border border-gray-100"
+                            data-title="Pro Code Snippet Pack" data-type="Document / PDF+JS" data-size="12 MB"
+                            data-price="$25.00"
+                            data-desc="Over 100+ premium React & Tailwind UI components ready to copy-paste. Save hours of development time."
+                            data-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop">
+                            <div class="card-img-wrapper w-full h-48 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop"
+                                    alt="File Thumbnail" class="w-full h-full object-cover border-b border-gray-100">
+                            </div>
+                            <div class="card-content p-5 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-gray-100 text-gray-600 rounded">Code</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-green-100 text-green-800 rounded">Buy:
+                                        $25</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1 leading-tight">Pro Code Snippet Pack
+                                </h3>
+                                <p class="text-sm text-gray-500 mb-4 flex-1 line-clamp-2">Over 100+ premium React &
+                                    Tailwind UI components ready to use.</p>
+                                <div class="mt-auto grid grid-cols-2 gap-2">
+                                    <button
+                                        class="open-modal-btn text-center bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded-md font-medium text-sm transition btn-hover">
+                                        Details
+                                    </button>
+                                    <a href="#"
+                                        class="card-wa-btn text-center bg-whatsapp hover:bg-green-600 text-white py-2 rounded-md font-medium text-sm transition btn-hover flex items-center justify-center gap-1">
+                                        <i class="fa-brands fa-whatsapp"></i> Buy
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="file-card card-glass rounded-xl overflow-hidden hover-lift flex flex-col h-full bg-white border border-gray-100"
+                            data-title="Cloud Server Dashboard" data-type="Software / App" data-size="80 MB"
+                            data-price="$15/month"
+                            data-desc="Advanced analytics dashboard for managing multiple cloud servers. License key required for activation."
+                            data-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop">
+                            <div class="card-img-wrapper w-full h-48 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+                                    alt="File Thumbnail" class="w-full h-full object-cover border-b border-gray-100">
+                            </div>
+                            <div class="card-content p-5 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-gray-100 text-gray-600 rounded">Dashboard</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-purple-100 text-purple-800 rounded">Rent:
+                                        $15/m</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1 leading-tight">Cloud Server Dashboard
+                                </h3>
+                                <p class="text-sm text-gray-500 mb-4 flex-1 line-clamp-2">Advanced analytics dashboard
+                                    for managing multiple servers.</p>
+                                <div class="mt-auto grid grid-cols-2 gap-2">
+                                    <button
+                                        class="open-modal-btn text-center bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded-md font-medium text-sm transition btn-hover">
+                                        Details
+                                    </button>
+                                    <a href="#"
+                                        class="card-wa-btn text-center bg-whatsapp hover:bg-green-600 text-white py-2 rounded-md font-medium text-sm transition btn-hover flex items-center justify-center gap-1">
+                                        <i class="fa-brands fa-whatsapp"></i> Rent
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="file-card card-glass rounded-xl overflow-hidden hover-lift flex flex-col h-full bg-white border border-gray-100"
+                            data-title="Complete 3D Asset Pack V2" data-type="Assets / RAR" data-size="2.4 GB"
+                            data-price="$150.00"
+                            data-desc="Massive library of 500+ low-poly 3D models ready for game engines. Includes textures, materials, and source files."
+                            data-image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop">
+                            <div class="card-img-wrapper w-full h-48 flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&h=300&fit=crop"
+                                    alt="File Thumbnail" class="w-full h-full object-cover border-b border-gray-100">
+                            </div>
+                            <div class="card-content p-5 flex-1 flex flex-col">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-gray-100 text-gray-600 rounded">3D
+                                        Models</span>
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold bg-green-100 text-green-800 rounded">Buy:
+                                        $150</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1 leading-tight">Complete 3D Asset Pack V2
+                                </h3>
+                                <p class="text-sm text-gray-500 mb-4 flex-1 line-clamp-2">Massive library of 500+
+                                    game-ready low-poly 3D models.</p>
+                                <div class="mt-auto grid grid-cols-2 gap-2">
+                                    <button
+                                        class="open-modal-btn text-center bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded-md font-medium text-sm transition btn-hover">
+                                        Details
+                                    </button>
+                                    <a href="#"
+                                        class="card-wa-btn text-center bg-whatsapp hover:bg-green-600 text-white py-2 rounded-md font-medium text-sm transition btn-hover flex items-center justify-center gap-1">
+                                        <i class="fa-brands fa-whatsapp"></i> Buy
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more mock cards here to fill out the grid nicely -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:justify-start mb-6 md:mb-0 items-center gap-2 text-white">
+                    <i class="fa-solid fa-cloud-arrow-down text-2xl"></i>
+                    <span class="text-xl font-bold">FileMarket</span>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <span class="sr-only">Facebook</span>
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <span class="sr-only">Twitter</span>
+                        <i class="fa-brands fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-whatsapp transition whatsapp-link"
+                        data-message="Hello FileMarket!">
+                        <span class="sr-only">WhatsApp</span>
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
+                <p class="text-base text-gray-400 text-center md:text-left">
+                    &copy; 2026 Admin Files. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex justify-center md:justify-start space-x-4 text-sm">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FILE DETAILS MODAL -->
+    <div id="file-details-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-gray-900 bg-opacity-75 backdrop-blur-sm transition-opacity">
+        <div
+            class="modal-transition bg-white rounded-2xl shadow-2xl w-full max-w-4xl mx-4 max-h-[90vh] overflow-y-auto scale-95 opacity-0 flex flex-col md:flex-row relative">
+            <button id="close-modal-btn"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 z-10 p-2 bg-white/50 backdrop-blur rounded-full shadow-sm hover:bg-white transition">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="w-full md:w-2/5 md:min-h-full bg-gray-100 relative">
+                <img id="modal-image" src="" alt="File Preview" class="w-full h-64 md:h-full object-cover">
+            </div>
+            <div class="w-full md:w-3/5 p-8 flex flex-col">
+                <div class="mb-4 text-sm text-gray-500 font-medium flex gap-4 border-b pb-4">
+                    <span id="modal-type"><i class="fa-solid fa-file-code mr-1"></i> Type: ---</span>
+                    <span id="modal-size"><i class="fa-solid fa-hard-drive mr-1"></i> Size: ---</span>
+                </div>
+                <h2 id="modal-title" class="text-2xl font-bold text-gray-900 mb-4">File Title</h2>
+                <div class="prose prose-sm text-gray-600 mb-8 flex-grow">
+                    <p id="modal-desc">Detailed physical description goes here...</p>
+                    <p class="mt-4 text-sm bg-blue-50 text-blue-800 p-3 rounded border border-blue-100">
+                        <i class="fa-solid fa-circle-info mr-1"></i> Note: For premium files, clicking the button below
+                        will open a WhatsApp chat directly with the admin for secure delivery and payment.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border flex items-center justify-between mt-auto">
+                    <div id="modal-price-block" class="flex flex-col">
+                        <span class="text-sm text-gray-500 font-medium uppercase tracking-wider">Price</span>
+                        <span id="modal-price" class="text-2xl font-extrabold text-green-600">$0.00</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <button id="modal-download-btn"
+                            class="hidden flex items-center gap-2 bg-deep-blue hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium shadow-md btn-hover transition">
+                            <i class="fa-solid fa-download"></i> Direct Download
+                        </button>
+                        <a href="#" id="modal-wa-btn"
+                            class="hidden flex items-center gap-2 bg-whatsapp hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium shadow-md btn-hover transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Proceed to WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
